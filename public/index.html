@@ -10,6 +10,20 @@
 
 <body>
   <div id="app"></div>
+  <script>
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('./serviceWorker.js')
+          .then(registration => {
+            console.log("SW registrado")
+          })
+          .catch(registrationError => {
+            console.log('SW error', registrationError)
+          })
+      })
+    }
+  </script>
 </body>
 
 </html>

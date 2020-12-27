@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
-import '../styles/components/Header.css'
+import '../styles/components/Header.css';
 
 const Header = () => {
   const { state } = useContext(AppContext);
@@ -20,6 +20,6 @@ const Header = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

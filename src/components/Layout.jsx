@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import '../styles/components/Layout.css'
+import '../styles/components/Layout.css';
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +11,6 @@ const Layout = ({ children }) => {
       <Footer />
     </div>
   );
-}
+};
 
 export default Layout;

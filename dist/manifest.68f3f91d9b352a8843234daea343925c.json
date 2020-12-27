@@ -1,0 +1,23 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.3f0162932de0d6807704a47478e4bb0e.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.53fa95fe834c6d5c0b5c9eeed6811b5b.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Storevels ",
+  "short_name": "Storevels ",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "shortname": "Storevels",
+  "description": "Storevels los mejores productos a tu alcance",
+  "background_color": "#fff",
+  "theme_color": "#b1a"
+}
