@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+/* const CopyPlugin = require('copy-webpack-plugin'); */
 
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
@@ -61,23 +62,33 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
+    /* new CopyPlugin({
+      patterns: [
+        { from: 'public/manifest.json', to: '' },
+        { from: 'public/service-worker.js', to: '' },
+        { from: 'public/favicon.png', to: 'assets' },
+      ],
+    }), */
     new WebpackPwaManifestPlugin({
       //Le pasamos el objeto de configuracion
-      name: 'Storevels ',
-      shortname: 'Storevels',
-      description: 'Storevels los mejores productos a tu alcance',
+      name: 'FincaApp ',
+      shortname: 'FincaApp',
+      description: 'FincaApp permite gestionar la administracion de tu finca.',
       background_color: '#fff',
       theme_color: '#b1a',
       //Array iconos de la aplicacion
       icons: [
         {
-          src: path.resolve('src/assets/favicon.png'),
+          src: path.resolve('./src/assets/favicon.png'),
           //Le pasamos todos los tamaños que requerimos
           sizes: [192, 512],
         },
       ],
     }),
-    /* new FaviconsWebpackPlugin('src/assets/favicon.png'), */
+
+    new FaviconsWebpackPlugin({
+      logo: './src/assets/favicon.png',
+    }),
 
     new WorkboxWebpackPlugin.GenerateSW({
       runtimeCaching: [
