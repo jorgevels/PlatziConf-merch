@@ -2,7 +2,7 @@ export default {
   cart: [],
   buyer: [],
   orders: [],
-  products: [
+  /* products: [
     {
       id: '1',
       image: 'https://arepa.s3.amazonaws.com/camiseta.png',
@@ -45,5 +45,5 @@ export default {
       price: 35,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     },
-  ],
+  ], */
 };
